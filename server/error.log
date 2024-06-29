@@ -1158,3 +1158,27 @@ Argument `user` is missing.
 29-06-2024 15:27:35 error: [/auth/register] - No recipients defined
 29-06-2024 15:36:17 error: [/auth/login] - secretOrPrivateKey must have a value
 29-06-2024 15:37:38 error: [/auth/login] - secretOrPrivateKey must have a value
+29-06-2024 16:54:22 error: [/auth/register] - 
+Invalid `prisma.users.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:30:44
+
+  27 const salt = await bcrypt.genSalt(10);
+  28 const hashedPassword = await bcrypt.hash(password, salt);
+  29 console.log(type)
+→ 30 const newUser = await prisma.users.create({
+       data: {
+         name: "wdf wgref",
+         email: "jalaym123@gmail.com",
+         password: "$2b$10$9k6t068bHh1ti4Pbd4ec0uJE.RjVQ2NY1IHLWd5.jDibziwJdXYT.",
+         phoneNumber: "8780279011",
+         city: undefined,
+         country: undefined,
+         state: undefined,
+         zipCode: "395006",
+         type: "INDIVIDUAL"
+               ~~~~~~~~~~~~
+       }
+     })
+
+Invalid value for argument `type`. Expected UserType.
+29-06-2024 17:17:25 error: [/middleware/verifyJWT] - invalid signature

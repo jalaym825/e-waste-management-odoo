@@ -10,7 +10,7 @@ const mailer = require("../../utils/mailer");
 
 const register = async (req, res, next) => {
     try {
-        const { email, password, phoneNumber, name, city, country, state, zipCode, countryCode, type } = req.body;
+        const { email, password, phoneNumber, name, city, country, state, zipCode, type } = req.body;
         const user = await prisma.users.findUnique({
             where: {
                 email: email.toLowerCase(),
@@ -25,7 +25,6 @@ const register = async (req, res, next) => {
         }
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
-        
         const newUser = await prisma.users.create({
             data: {
                 name,
@@ -39,6 +38,16 @@ const register = async (req, res, next) => {
                 type: type ? type.toUpperCase() : "INDIVIDUALS",
             },
         });
+
+        // If the user is a recycler, create a corresponding Recycler record
+        if (newUser.type === "RECYCLERS") {
+            await prisma.recycler.create({
+                data: {
+                    userId: newUser.sys_id,
+                },
+            });
+        }
+
         logger.info(`[/auth/register] - success - ${newUser.sys_id}`);
         logger.debug(`[/auth/register] - email: ${email}`);
 

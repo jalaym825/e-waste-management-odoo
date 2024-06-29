@@ -9,7 +9,7 @@ datasource db {
 
 enum UserType {
   INDIVIDUALS
-  BUSINESS
+  BUSINESSES
   RECYCLERS
 }
 
@@ -55,6 +55,8 @@ model CollectionRequest {
   status              CollectionStatus        @default(PENDING)
   createdAt           DateTime                @default(now())
   updatedAt           DateTime                @updatedAt
+  recyclerId          String?
+  recycler            Recycler?               @relation("CollectionRequestRecycler", fields: [recyclerId], references: [id])
   payment             Payment?
   items               CollectionRequestItem[]
 }
@@ -86,6 +88,7 @@ model Recycler {
   userId   String    @unique
   user     Users     @relation(fields: [userId], references: [sys_id])
   services Service[]
+  collectionRequests CollectionRequest[] @relation("CollectionRequestRecycler")
 }
 
 model Service {
@@ -122,13 +125,13 @@ model AcceptedWasteType {
 }
 
 model VerificationTokens {
-  id         String   @id @default(uuid())
-  userSysId  String
-  token      String   @unique
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
-  expiresAt  DateTime
-  user       Users    @relation("verificationToken", fields: [userSysId], references: [sys_id])
+  id        String   @id @default(uuid())
+  userSysId String
+  token     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  expiresAt DateTime
+  user      Users    @relation("verificationToken", fields: [userSysId], references: [sys_id])
 
   @@index([userSysId])
 }

@@ -1415,3 +1415,76 @@ Argument `user` is missing.
 29-06-2024 15:40:08 debug: [/auth/login] - email: 22ce071@charusat.edu.in
 29-06-2024 15:40:21 info: [/auth/login] - success - 3d3cc48f-d3b8-4d59-ba2e-c5115c72e495
 29-06-2024 15:40:21 debug: [/auth/login] - email: 22ce071@charusat.edu.in
+29-06-2024 16:19:35 info: [/auth/register] - success - dfe6b5a7-0d5c-4444-9d0c-cc940535d06b
+29-06-2024 16:19:35 debug: [/auth/register] - email: jalaym123@gmail.com
+29-06-2024 16:21:26 info: [/auth/register] - success - 58215d88-fc10-420e-9d35-56f311d34511
+29-06-2024 16:21:26 debug: [/auth/register] - email: jalaym123@gmail.com
+29-06-2024 16:22:08 info: [/auth/register] - success - 718c29df-644f-4386-a1b7-2277fd08ea2b
+29-06-2024 16:22:08 debug: [/auth/register] - email: jalaym123@gmail.com
+29-06-2024 16:29:12 info: [/auth/register] - success - 4cff7e01-cc3e-452e-a1b9-6e5d9f81e4ac
+29-06-2024 16:29:12 debug: [/auth/register] - email: jalaym123@gmail.com
+29-06-2024 16:30:46 info: [/auth/register] - success - cc9758d6-fcec-4d03-a194-1f3c0bd2c271
+29-06-2024 16:30:46 debug: [/auth/register] - email: 22ce071@charusat.edu.in
+29-06-2024 16:31:48 info: [/auth/register] - success - 6ae21a5d-acde-47fd-a3fd-4b5f85daf3c7
+29-06-2024 16:31:48 debug: [/auth/register] - email: jalaym123@gmail.com
+29-06-2024 16:32:19 info: [/auth/register] - success - b8217f31-8d60-4901-8ef0-d37dbba8819b
+29-06-2024 16:32:19 debug: [/auth/register] - email: jalaym123@gmail.com
+29-06-2024 16:49:34 info: [/auth/register] - success - d153f2e8-3f66-442c-8135-99d37f4fd322
+29-06-2024 16:49:34 debug: [/auth/register] - email: jalaym123@gmail.com
+29-06-2024 16:51:10 info: [/auth/register] - success - f03c2d64-fc9d-4256-add3-b1be35c1f931
+29-06-2024 16:51:10 debug: [/auth/register] - email: jalaym123@gmail.com
+29-06-2024 16:51:37 info: [/auth/register] - success - 59b28691-c382-415a-9115-81e3c6d9d7f8
+29-06-2024 16:51:37 debug: [/auth/register] - email: jalaym123@gmail.com
+29-06-2024 16:54:22 error: [/auth/register] - 
+Invalid `prisma.users.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:30:44
+
+  27 const salt = await bcrypt.genSalt(10);
+  28 const hashedPassword = await bcrypt.hash(password, salt);
+  29 console.log(type)
+→ 30 const newUser = await prisma.users.create({
+       data: {
+         name: "wdf wgref",
+         email: "jalaym123@gmail.com",
+         password: "$2b$10$9k6t068bHh1ti4Pbd4ec0uJE.RjVQ2NY1IHLWd5.jDibziwJdXYT.",
+         phoneNumber: "8780279011",
+         city: undefined,
+         country: undefined,
+         state: undefined,
+         zipCode: "395006",
+         type: "INDIVIDUAL"
+               ~~~~~~~~~~~~
+       }
+     })
+
+Invalid value for argument `type`. Expected UserType.
+29-06-2024 16:55:14 info: [/auth/register] - success - 4130f8fe-cbb1-4b0b-8074-ad872b5a0505
+29-06-2024 16:55:14 debug: [/auth/register] - email: jalaym123@gmail.com
+29-06-2024 17:17:12 warn: [/middleware/verifyJWT] - token missing
+29-06-2024 17:17:12 debug: [/middleware/verifyJWT] - token: undefined
+29-06-2024 17:17:25 error: [/middleware/verifyJWT] - invalid signature
+29-06-2024 17:17:36 warn: [/auth/login] - invalid password
+29-06-2024 17:17:36 debug: [/auth/login] - email: jalaym123@gmail.com
+29-06-2024 17:17:46 warn: [/auth/login] - invalid password
+29-06-2024 17:17:46 debug: [/auth/login] - email: jalaym123@gmail.com
+29-06-2024 17:17:49 info: [/auth/login] - success - 4130f8fe-cbb1-4b0b-8074-ad872b5a0505
+29-06-2024 17:17:49 debug: [/auth/login] - email: jalaym123@gmail.com
+29-06-2024 17:17:59 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:18:53 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:19:58 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:21:25 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:25:47 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:27:22 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:27:59 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:28:13 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:28:23 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:28:29 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:28:29 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:28:46 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:29:30 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:37:25 warn: [/middleware/verifyJWT] - token missing
+29-06-2024 17:37:25 debug: [/middleware/verifyJWT] - token: undefined
+29-06-2024 17:37:34 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:37:49 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:45:20 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 17:46:45 info: [/middleware/verifyJWT] - user: undefined authenticated
