@@ -20,9 +20,99 @@
     margin: 0;
     font-size: 64px;
     font-weight: bold;
+    display: flex;
+    gap: 2px; /* Adjust gap as needed */
 }
 
 .hero p {
     margin-top: 10px;
     font-size: 18px;
+}
+
+.animate span {
+    opacity: 0;
+    animation: animateLetter 3s infinite;
+}
+
+.animate span:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.animate span:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.animate span:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.animate span:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+.animate span:nth-child(5) {
+    animation-delay: 1.5s;
+}
+
+.animate span:nth-child(6) {
+    animation-delay: 1.8s;
+}
+
+.animate span:nth-child(7) {
+    animation-delay: 2.1s;
+}
+
+.animate span:nth-child(8) {
+    animation-delay: 2.4s;
+}
+
+.animate span:nth-child(9) {
+    animation-delay: 2.7s;
+}
+
+@keyframes animateLetter {
+    0%, 80%, 100% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+}
+
+.info-blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.info-block {
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-block.gray-bg {
+    background-color: #DF9600;
+}
+
+.info-block.white-bg {
+    background-color: #DF9600;
+}
+
+.info-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-block h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.info-block p {
+    font-size: 18px;
+    color: #333;
 }
