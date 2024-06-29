@@ -13,19 +13,67 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { RadioButton } from "primereact/radiobutton";
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
+import Global from "../../utils/Global";
+import { useNavigate } from "react-router-dom";
 
 const defaultTheme = createTheme();
 
 export default function SignUp() {
-  const [ingredient, setIngredient] = useState("");
+  const [userType, setUserType] = useState("Individual");
+  const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    const formData = new FormData(event.currentTarget);
+    const newErrors = {};
+
+    if (!formData.get("firstName"))
+      return setErrors({ firstName: "First Name is required" });
+    else
+      newErrors.firstName = "";
+    if (!formData.get("lastName"))
+      return setErrors({ lastName: "Last Name is required" });
+    else
+      newErrors.lastName = "";
+    if (!formData.get("email"))
+      return setErrors({ email: "Email Name is required" });
+    else
+      newErrors.email = "";
+    if (!formData.get("password"))
+      return setErrors({ password: "Password is required" });
+    else
+      newErrors.password = "";
+    if (!formData.get("phoneNumber"))
+      return setErrors({ phoneNumber: "Phone Number is required" });
+    else 
+      newErrors.phoneNumber = "";
+    if (!formData.get("zipCode"))
+      return setErrors({ zipCode: "Zip Code is required" });
+    else
+      newErrors.zipCode = "";
+
+    if (!userType)
+      return setErrors({ userType: "User type is required" });
+    else
+      newErrors.userType = "";
+
+    Global.httpPost('/auth/register', {
+      name: formData.get("firstName") + " " + formData.get("lastName"),
+      // firstName: formData.get("firstName"),
+      // lastName: formData.get("lastName"),
+      email: formData.get("email"),
+      password: formData.get("password"),
+      userType: userType,
+      phoneNumber: formData.get("phoneNumber"),
+      zipCode: formData.get("zipCode"),
+    }, false)
+    .then(data => {
+      navigate('/')
+    })
+    .catch(err => {
+      alert(err);
+    })
   };
 
   return (
@@ -62,6 +110,8 @@ export default function SignUp() {
                   id="firstName"
                   label="First Name"
                   autoFocus
+                  error={!!errors.firstName}
+                  helperText={errors.firstName}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -72,6 +122,8 @@ export default function SignUp() {
                   label="Last Name"
                   name="lastName"
                   autoComplete="family-name"
+                  error={!!errors.lastName}
+                  helperText={errors.lastName}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -82,9 +134,23 @@ export default function SignUp() {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+                  error={!!errors.email}
+                  helperText={errors.email}
                 />
               </Grid>
               <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="phoneNumber"
+                  label="Phone Number"
+                  name="phoneNumber"
+                  autoComplete="tel"
+                  error={!!errors.phoneNumber}
+                  helperText={errors.phoneNumber}
+                />
+              </Grid>
+              <Grid item xs={6}>
                 <TextField
                   required
                   fullWidth
@@ -93,6 +159,21 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  error={!!errors.password}
+                  helperText={errors.password}
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <TextField
+                  required
+                  fullWidth
+                  name="zipCode"
+                  label="Zip Code"
+                  type="text"
+                  id="zipCode"
+                  autoComplete="postal-code"
+                  error={!!errors.zipCode}
+                  helperText={errors.zipCode}
                 />
               </Grid>
             </Grid>
@@ -100,42 +181,46 @@ export default function SignUp() {
               <Grid container spacing={2}>
                 <Grid item xs={4}>
                   <RadioButton
-                    inputId="ingredient1"
-                    name="pizza"
-                    value="Cheese"
-                    onChange={(e) => setIngredient(e.value)}
-                    checked={ingredient === "Individual"}
+                    inputId="userType1"
+                    name="userType"
+                    value="Individual"
+                    onChange={(e) => setUserType(e.value)}
+                    checked={userType === "Individual"}
                   />
-                  <label htmlFor="ingredient1" className="ml-2">
+                  <label htmlFor="userType1" className="ml-2">
                     Individual
                   </label>
                 </Grid>
                 <Grid item xs={4}>
                   <RadioButton
-                    inputId="ingredient2"
-                    name="pizza"
-                    value="Mushroom"
-                    onChange={(e) => setIngredient(e.value)}
-                    checked={ingredient === "Buisness"}
-                    
+                    inputId="userType2"
+                    name="userType"
+                    value="Buisnesses"
+                    onChange={(e) => setUserType(e.value)}
+                    checked={userType === "Buisnesses"}
                   />
-                  <label htmlFor="ingredient2" className="ml-2">
-                    Buisness
+                  <label htmlFor="userType2" className="ml-2">
+                    Buisnesses
                   </label>
                 </Grid>
                 <Grid item xs={4}>
                   <RadioButton
-                    inputId="ingredient4"
-                    name="pizza"
-                    value="Onion"
-                    onChange={(e) => setIngredient(e.value)}
-                    checked={ingredient === "Recycler"}
+                    inputId="userType3"
+                    name="userType"
+                    value="Recycler"
+                    onChange={(e) => setUserType(e.value)}
+                    checked={userType === "Recycler"}
                   />
-                  <label htmlFor="ingredient3" className="ml-2">
+                  <label htmlFor="userType3" className="ml-2">
                     Recycler
                   </label>
                 </Grid>
               </Grid>
+              {errors.userType && (
+                <Typography color="error" variant="body2">
+                  {errors.userType}
+                </Typography>
+              )}
             </Box>
             <Button
               type="submit"
@@ -154,7 +239,6 @@ export default function SignUp() {
             </Grid>
           </Box>
         </Box>
-        {/* <Copyright sx={{ mt: 5 }} /> */}
       </Container>
     </ThemeProvider>
   );

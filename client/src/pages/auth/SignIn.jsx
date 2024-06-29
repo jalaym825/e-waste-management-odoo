@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -13,25 +12,13 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
-// TODO remove, this demo shouldn't need to reset the theme.
+import {loginUser} from '../../utils/Helper'
+import { useNavigate } from 'react-router-dom';
 
 const defaultTheme = createTheme();
 
 export default function SignIn() {
+  const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -39,6 +26,13 @@ export default function SignIn() {
       email: data.get('email'),
       password: data.get('password'),
     });
+    loginUser({email: data.get('email'), password: data.get('password')})
+    .then((res) => {
+      navigate('/signup')
+    })
+    .catch((err) => {
+      alert(err)
+    })
   };
 
   return (
@@ -56,8 +50,6 @@ export default function SignIn() {
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
             <LockOutlinedIcon />
           </Avatar>
-          {/* <ExampleSegmentedControls > */}
-            {/* </ExampleSegmentedControls> */}
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
@@ -94,17 +86,15 @@ export default function SignIn() {
             >
               Sign In
             </Button>
-            <Grid container>
-            
+            <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
+                <Link href="signup" variant="body2" sx={{ color: "black" }}>
+                  Don't have an account? Sign Up
                 </Link>
               </Grid>
             </Grid>
           </Box>
         </Box>
-        {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
       </Container>
     </ThemeProvider>
   );
