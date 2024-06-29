@@ -9,6 +9,9 @@ import { Home } from "./pages/home/Home.jsx";
 import { Services } from "./pages/services/Services.jsx";
 import Search from "./pages/search/Search.jsx";
 import AddItem from "./pages/item/Item.jsx";
+import Blog1 from "./pages/blog/Blog1.jsx";
+import Blog2 from "./pages/blog/Blog2.jsx";
+import Blog3 from "./pages/blog/Blog3.jsx";
 export const cookies = new Cookies();
 
 function App() {
@@ -24,6 +27,10 @@ function App() {
           <Route path="LogIn" element={<LogIn />} />
           <Route path="search" element={<Search/>} />
           <Route path="add-item" element={<AddItem/>} />
+          <Route  path="types" element={<Blog1/>}/>
+          <Route  path="methods" element={<Blog2/>}/>
+          <Route  path="areas" element={<Blog3/>}/>
+
         </Route>
       </Routes>
     </>

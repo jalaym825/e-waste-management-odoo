@@ -1,5 +1,5 @@
-import React from 'react'
-import './Services.css'
+import React from 'react';
+import './Services.css';
 
 export const Services = () => {
     return (
@@ -7,30 +7,42 @@ export const Services = () => {
             <section className="services">
                 <h2>Our Services</h2>
                 <p>We Are Here To Help You</p>
-                <div class="services-list">
-                    <div class="service-item">
-                        <div class="service-image">
-                            <img src="type-waste.webp" alt="Mobile Apps" />
+                <div className="services-list">
+                    <div className="service-item">
+                        <div className="service-image">
+                            <img src="type-waste.webp" alt="Types of Waste" />
                         </div>
-                        <h3>MOBILE APPS</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla non metus pulvinar.</p>
+                        <a href='/types' className='link'>
+                            <h3>TYPES OF WASTE</h3>
+                        </a>
+                        <p>
+                            A waste management system is a streamlined process that organizations use to dispose of, reduce, reuse, and prevent waste. Also known as waste disposal, it is an approach where companies implement comprehensive strategies to efficiently manage wastes from their origin until their final disposal. Possible waste disposal methods are recycling, composting, incineration, landfills, bioremediation, waste to energy, and waste minimization.
+                        </p>
                     </div>
-                    <div class="service-item">
-                        <div class="service-image">
-                            <img src="processing-method.jpg" alt="Creative Websites" />
+                    <div className="service-item">
+                        <div className="service-image">
+                            <img src="processing-method.jpg" alt="Processing Method" />
                         </div>
-                        <h3>CREATIVE WEBSITES</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla non metus pulvinar.</p>
+                        <a href='/methods' className='link'>
+                            <h3>PROCESSING METHOD</h3>
+                        </a>
+                        <p>
+                            E-Waste management seeks to recover and process the electronic waste and recycle or refurbish it to make it useful. But, electronic recycling can be challenging especially because these devices are sophisticated and manufactured from varying proportions of glass, metals and plastics. Depending on the type of electronics, the process for recycling or refurbishing may change.
+                        </p>
                     </div>
-                    <div class="service-item">
-                        <div class="service-image">
-                            <img src="waste-management.jpg" alt="SEO Optimization" />
+                    <div className="service-item">
+                        <div className="service-image">
+                            <img src="waste-management.jpg" alt="Service Area" />
                         </div>
-                        <h3>SEO OPTIMIZATION</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla non metus pulvinar.</p>
+                        <a href='/areas' className='link'>
+                            <h3>SERVICE AREA</h3>
+                        </a>
+                        <p>
+                            Waste disposal area means a place where garbage, refuse or domestic or industrial waste, exclusive of liquid industrial waste, is disposed of or dumped and shall include a sewage treatment plant or sewage lagoons. The major objective of e-waste management is to reduce, reuse, and recycle. Some of the e-waste consists of valuable covering or materials inside which can be reused or recycled.
+                        </p>
                     </div>
                 </div>
             </section>
         </>
-    )
+    );
 }
