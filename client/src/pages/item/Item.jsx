@@ -45,6 +45,7 @@ export default function AddItem() {
     }, true)
     .then((response) => {
       console.log(response);
+      alert('Pickup scheduled successfully!');
     })
     .catch((error) => {
       console.error(error);
