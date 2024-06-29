@@ -1,0 +1,1094 @@
+29-06-2024 10:22:47 error: [/auth/register] - userId is not defined
+29-06-2024 10:22:53 error: [/auth/register] - userId is not defined
+29-06-2024 10:25:02 error: [/auth/register] - userId is not defined
+29-06-2024 10:25:03 error: [/auth/register] - userId is not defined
+29-06-2024 10:25:04 error: [/auth/register] - userId is not defined
+29-06-2024 10:25:12 error: [/auth/register] - userId is not defined
+29-06-2024 10:26:05 error: [/auth/register] - userId is not defined
+29-06-2024 10:26:41 error: [/auth/register] - 
+Invalid `prisma.users.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:40:44
+
+  37 const salt = await bcrypt.genSalt(10);
+  38 const hashedPassword = await bcrypt.hash(password, salt);
+  39 
+→ 40 const newUser = await prisma.users.create({
+       data: {
+         name: "Jalay",
+         email: "jalaym123@gmail.com",
+         id: "jalaym123",
+         password: "$2b$10$N9yDUez1WBo6MgGYv8xfDe5wlcbBtxkSASe2Q7MleFNKY9VuH4v1y",
+         phoneNumber: "1111111111",
+         city: "Surat",
+         country: "India",
+         state: "Gujarat",
+         zipCode: "123456",
+         type: "INDIVIDUAL",
+     +   sys_id: String
+       }
+     })
+
+Argument `sys_id` is missing.
+29-06-2024 10:29:33 error: [/auth/register] - 
+Invalid `prisma.users.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:40:44
+
+  37 const salt = await bcrypt.genSalt(10);
+  38 const hashedPassword = await bcrypt.hash(password, salt);
+  39 
+→ 40 const newUser = await prisma.users.create({
+       data: {
+         name: "Jalay",
+         email: "jalaym123@gmail.com",
+         id: "jalaym123",
+         password: "$2b$10$4JKnJyc43ND2nDxW9xAMDOwPVeWDCS09QhXCeMvvivCuiu7gyHHwi",
+         phoneNumber: "1111111111",
+         city: "Surat",
+         country: "India",
+         state: "Gujarat",
+         zipCode: "123456",
+         type: "INDIVIDUAL"
+               ~~~~~~~~~~~~
+       }
+     })
+
+Invalid value for argument `type`. Expected UserType.
+29-06-2024 10:29:53 info: [/auth/register] - success - undefined
+29-06-2024 10:29:53 error: [/auth/register] - userId is not defined
+29-06-2024 10:52:28 error: [/auth/login] - email is not defined
+29-06-2024 10:53:12 error: [/auth/login] - email is not defined
+29-06-2024 10:53:24 warn: [/auth/login] - invalid password
+29-06-2024 10:53:24 error: [/auth/login] - email is not defined
+29-06-2024 10:53:25 warn: [/auth/login] - invalid password
+29-06-2024 10:53:25 error: [/auth/login] - email is not defined
+29-06-2024 10:53:50 warn: [/auth/login] - invalid password
+29-06-2024 10:53:50 debug: [/auth/login] - emailOrId: jalaym123@gmail.com
+29-06-2024 10:53:54 info: [/auth/login] - success - jalaym123
+29-06-2024 10:53:54 debug: [/auth/login] - emailOrId: jalaym123@gmail.com
+29-06-2024 10:58:04 warn: [/middleware/verifyJWT] - token missing
+29-06-2024 10:58:04 debug: [/middleware/verifyJWT] - token: undefined
+29-06-2024 10:58:19 warn: [/middleware/verifyJWT] - token missing
+29-06-2024 10:58:19 debug: [/middleware/verifyJWT] - token: undefined
+29-06-2024 10:58:39 info: [/middleware/verifyJWT] - user: jalaym123 authenticated
+29-06-2024 10:58:39 error: [/auth/getUser] - user is not defined
+29-06-2024 10:59:23 info: [/middleware/verifyJWT] - user: jalaym123 authenticated
+29-06-2024 10:59:23 info: [/auth/getUser] - success - jalaym123
+29-06-2024 10:59:23 debug: [/auth/getUser] - id: jalaym123
+29-06-2024 10:59:31 info: [/middleware/verifyJWT] - user: jalaym123 authenticated
+29-06-2024 10:59:31 info: [/auth/getUser] - success - jalaym123
+29-06-2024 10:59:31 debug: [/auth/getUser] - id: jalaym123
+29-06-2024 11:29:09 info: [/middleware/verifyJWT] - user: jalaym123 authenticated
+29-06-2024 11:29:09 info: [/auth/getUser] - success - jalaym123
+29-06-2024 11:29:09 debug: [/auth/getUser] - id: jalaym123
+29-06-2024 11:30:06 warn: [/middleware/isUser] - data missing
+29-06-2024 11:30:06 debug: [/middleware/isUser] - email: undefined
+29-06-2024 11:33:10 error: [/middleware/isUser] - Cannot read properties of undefined (reading 'toLowerCase')
+29-06-2024 11:33:15 info: [/middleware/verifyJWT] - user: jalaym123 authenticated
+29-06-2024 11:33:15 info: [/auth/getUser] - success - jalaym123
+29-06-2024 11:33:15 debug: [/auth/getUser] - id: jalaym123
+29-06-2024 11:43:22 error: [/middleware/isUser] - Cannot read properties of undefined (reading 'toLowerCase')
+29-06-2024 11:43:36 error: [/middleware/isUser] - Cannot read properties of undefined (reading 'toLowerCase')
+29-06-2024 11:43:36 error: [/middleware/isUser] - Cannot read properties of undefined (reading 'toLowerCase')
+29-06-2024 11:44:11 error: [/middleware/isUser] - Cannot read properties of undefined (reading 'toLowerCase')
+29-06-2024 11:51:52 error: [/middleware/isUser] - 
+Invalid `prisma.users.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/utils/middleware.js:92:43
+
+  89         email: emailOrId.toLowerCase(),
+  90     },
+  91 });
+→ 92 user = user || await prisma.users.findUnique({
+       where: {
+         userId: "jalaym1",
+         ~~~~~~
+     ?   id?: String,
+     ?   sys_id?: String,
+     ?   email?: String,
+     ?   AND?: UsersWhereInput | UsersWhereInput[],
+     ?   OR?: UsersWhereInput[],
+     ?   NOT?: UsersWhereInput | UsersWhereInput[],
+     ?   name?: StringFilter | String,
+     ?   password?: StringFilter | String,
+     ?   type?: EnumUserTypeFilter | UserType,
+     ?   phoneNumber?: StringFilter | String,
+     ?   address?: StringNullableFilter | String | Null,
+     ?   city?: StringNullableFilter | String | Null,
+     ?   state?: StringNullableFilter | String | Null,
+     ?   zipCode?: StringNullableFilter | String | Null,
+     ?   country?: StringNullableFilter | String | Null,
+     ?   createdAt?: DateTimeFilter | DateTime,
+     ?   updatedAt?: DateTimeFilter | DateTime,
+     ?   isVerified?: BoolFilter | Boolean,
+     ?   collectionRequests?: CollectionRequestListRelationFilter,
+     ?   payments?: PaymentListRelationFilter,
+     ?   recycler?: RecyclerNullableRelationFilter | RecyclerWhereInput | Null,
+     ?   verificationTokens?: VerificationTokensListRelationFilter
+       }
+     })
+
+Unknown argument `userId`. Available options are marked with ?.
+29-06-2024 11:52:14 error: [/middleware/isUser] - 
+Invalid `prisma.users.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/utils/middleware.js:92:43
+
+  89         email: emailOrId.toLowerCase(),
+  90     },
+  91 });
+→ 92 user = user || await prisma.users.findUnique({
+       where: {
+         userId: "jalaym1",
+         ~~~~~~
+     ?   id?: String,
+     ?   sys_id?: String,
+     ?   email?: String,
+     ?   AND?: UsersWhereInput | UsersWhereInput[],
+     ?   OR?: UsersWhereInput[],
+     ?   NOT?: UsersWhereInput | UsersWhereInput[],
+     ?   name?: StringFilter | String,
+     ?   password?: StringFilter | String,
+     ?   type?: EnumUserTypeFilter | UserType,
+     ?   phoneNumber?: StringFilter | String,
+     ?   address?: StringNullableFilter | String | Null,
+     ?   city?: StringNullableFilter | String | Null,
+     ?   state?: StringNullableFilter | String | Null,
+     ?   zipCode?: StringNullableFilter | String | Null,
+     ?   country?: StringNullableFilter | String | Null,
+     ?   createdAt?: DateTimeFilter | DateTime,
+     ?   updatedAt?: DateTimeFilter | DateTime,
+     ?   isVerified?: BoolFilter | Boolean,
+     ?   collectionRequests?: CollectionRequestListRelationFilter,
+     ?   payments?: PaymentListRelationFilter,
+     ?   recycler?: RecyclerNullableRelationFilter | RecyclerWhereInput | Null,
+     ?   verificationTokens?: VerificationTokensListRelationFilter
+       }
+     })
+
+Unknown argument `userId`. Available options are marked with ?.
+29-06-2024 11:52:15 warn: [/middleware/isUser] - user not found
+29-06-2024 11:52:15 debug: [/middleware/isUser] - emailOrId: jalaym1
+29-06-2024 11:52:19 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 11:52:19 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 11:52:19 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 11:52:19 error: [/middleware/mailSent] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/utils/middleware.js:134:57
+
+  131 
+  132 const mailSent = async (req, res, next) => {
+  133     try {
+→ 134         let tokenData = await prisma.verificationTokens.findUnique({
+                where: {
+                  userId: "jalaym123",
+              ?   id?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   token?: StringFilter | String,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 11:52:41 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 11:52:41 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 11:52:41 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 11:52:41 error: [/middleware/mailSent] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/utils/middleware.js:132:57
+
+  129 
+  130 const mailSent = async (req, res, next) => {
+  131     try {
+→ 132         let tokenData = await prisma.verificationTokens.findUnique({
+                where: {
+                  userId: "jalaym123",
+              ?   id?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   token?: StringFilter | String,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 11:52:42 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 11:52:42 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 11:52:42 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 11:52:42 error: [/middleware/mailSent] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/utils/middleware.js:132:57
+
+  129 
+  130 const mailSent = async (req, res, next) => {
+  131     try {
+→ 132         let tokenData = await prisma.verificationTokens.findUnique({
+                where: {
+                  userId: "jalaym123",
+              ?   id?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   token?: StringFilter | String,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 11:52:42 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 11:52:42 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 11:52:42 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 11:52:42 error: [/middleware/mailSent] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/utils/middleware.js:132:57
+
+  129 
+  130 const mailSent = async (req, res, next) => {
+  131     try {
+→ 132         let tokenData = await prisma.verificationTokens.findUnique({
+                where: {
+                  userId: "jalaym123",
+              ?   id?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   token?: StringFilter | String,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 11:52:43 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 11:52:43 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 11:52:43 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 11:52:43 error: [/middleware/mailSent] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/utils/middleware.js:132:57
+
+  129 
+  130 const mailSent = async (req, res, next) => {
+  131     try {
+→ 132         let tokenData = await prisma.verificationTokens.findUnique({
+                where: {
+                  userId: "jalaym123",
+              ?   id?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   token?: StringFilter | String,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 11:52:44 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 11:52:44 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 11:52:44 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 11:52:44 error: [/middleware/mailSent] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/utils/middleware.js:132:57
+
+  129 
+  130 const mailSent = async (req, res, next) => {
+  131     try {
+→ 132         let tokenData = await prisma.verificationTokens.findUnique({
+                where: {
+                  userId: "jalaym123",
+              ?   id?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   token?: StringFilter | String,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 11:52:49 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 11:52:49 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 11:52:49 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 11:52:49 error: [/middleware/mailSent] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/utils/middleware.js:132:57
+
+  129 
+  130 const mailSent = async (req, res, next) => {
+  131     try {
+→ 132         let tokenData = await prisma.verificationTokens.findUnique({
+                where: {
+                  userId: "jalaym123",
+              ?   id?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   token?: StringFilter | String,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 11:53:03 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 11:53:03 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 11:53:03 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 11:53:03 error: [/middleware/mailSent] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/utils/middleware.js:132:57
+
+  129 
+  130 const mailSent = async (req, res, next) => {
+  131     try {
+→ 132         let tokenData = await prisma.verificationTokens.findUnique({
+                where: {
+                  userId: "jalaym123",
+              ?   id?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   token?: StringFilter | String,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 11:53:03 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 11:53:03 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 11:53:03 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 11:53:03 error: [/middleware/mailSent] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/utils/middleware.js:132:57
+
+  129 
+  130 const mailSent = async (req, res, next) => {
+  131     try {
+→ 132         let tokenData = await prisma.verificationTokens.findUnique({
+                where: {
+                  userId: "jalaym123",
+              ?   id?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   token?: StringFilter | String,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 11:53:04 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 11:53:04 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 11:53:04 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 11:53:04 error: [/middleware/mailSent] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/utils/middleware.js:132:57
+
+  129 
+  130 const mailSent = async (req, res, next) => {
+  131     try {
+→ 132         let tokenData = await prisma.verificationTokens.findUnique({
+                where: {
+                  userId: "jalaym123",
+              ?   id?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   token?: StringFilter | String,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 11:53:18 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 11:53:18 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 11:53:18 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 11:53:18 error: [/auth/sendVerificationMail] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:203:67
+
+  200 try {
+  201     const user = req.user;
+  202     const token = crypto.randomBytes(20).toString("hex");
+→ 203     const verificationToken = await prisma.verificationTokens.create({
+            data: {
+              token: "aad346de3bf45bd6842d56429d7ced573063ab47",
+              expiresAt: new Date("2024-06-30T06:23:18.105Z"),
+              ~~~~~~~~~
+              userId: "jalaym123",
+          ?   id?: String,
+          ?   createdAt?: DateTime,
+          ?   updatedAt?: DateTime
+            }
+          })
+
+Unknown argument `expiresAt`. Available options are marked with ?.
+29-06-2024 11:53:19 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 11:53:19 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 11:53:19 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 11:53:19 error: [/auth/sendVerificationMail] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:203:67
+
+  200 try {
+  201     const user = req.user;
+  202     const token = crypto.randomBytes(20).toString("hex");
+→ 203     const verificationToken = await prisma.verificationTokens.create({
+            data: {
+              token: "ee27ef110a196448c6dd2b2fa1666187070b1e0d",
+              expiresAt: new Date("2024-06-30T06:23:19.322Z"),
+              ~~~~~~~~~
+              userId: "jalaym123",
+          ?   id?: String,
+          ?   createdAt?: DateTime,
+          ?   updatedAt?: DateTime
+            }
+          })
+
+Unknown argument `expiresAt`. Available options are marked with ?.
+29-06-2024 11:53:31 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 11:53:31 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 11:53:31 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 11:53:31 error: [/auth/sendVerificationMail] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:203:67
+
+  200 try {
+  201     const user = req.user;
+  202     const token = crypto.randomBytes(20).toString("hex");
+→ 203     const verificationToken = await prisma.verificationTokens.create({
+            data: {
+              token: "f23bd06057fd2da8d53cafb23f0278b3b89c0b05",
+              expiresAt: new Date("2024-06-30T06:23:31.345Z"),
+              id: "jalaym123",
+          +   user: {
+          +     create: UsersCreateWithoutVerificationTokensInput | UsersUncheckedCreateWithoutVerificationTokensInput,
+          +     connectOrCreate: UsersCreateOrConnectWithoutVerificationTokensInput,
+          +     connect: UsersWhereUniqueInput
+          +   }
+            }
+          })
+
+Argument `user` is missing.
+29-06-2024 11:57:03 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 11:57:03 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 11:57:03 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 11:57:03 error: [/auth/sendVerificationMail] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:203:67
+
+  200 try {
+  201     const user = req.user;
+  202     const token = crypto.randomBytes(20).toString("hex");
+→ 203     const verificationToken = await prisma.verificationTokens.create({
+            data: {
+              token: "04a1f1be6b59fbede9c454e58e28c1436501cf73",
+              expiresAt: new Date("2024-06-30T06:27:03.330Z"),
+              id: "jalaym123",
+          +   user: {
+          +     create: UsersCreateWithoutVerificationTokensInput | UsersUncheckedCreateWithoutVerificationTokensInput,
+          +     connectOrCreate: UsersCreateOrConnectWithoutVerificationTokensInput,
+          +     connect: UsersWhereUniqueInput
+          +   }
+            }
+          })
+
+Argument `user` is missing.
+29-06-2024 11:59:08 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 11:59:08 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 11:59:08 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 11:59:08 error: [/auth/sendVerificationMail] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:203:67
+
+  200 try {
+  201     const user = req.user;
+  202     const token = crypto.randomBytes(20).toString("hex");
+→ 203     const verificationToken = await prisma.verificationTokens.create({
+            data: {
+              token: "91fb64b2104ec4565c42f13b10ebea363459723f",
+              expiresAt: new Date("2024-06-30T06:29:08.451Z"),
+              id: "jalaym123",
+          +   user: {
+          +     create: UsersCreateWithoutVerificationTokensInput | UsersUncheckedCreateWithoutVerificationTokensInput,
+          +     connectOrCreate: UsersCreateOrConnectWithoutVerificationTokensInput,
+          +     connect: UsersWhereUniqueInput
+          +   }
+            }
+          })
+
+Argument `user` is missing.
+29-06-2024 12:02:41 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:02:41 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:02:41 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:02:41 error: [/auth/sendVerificationMail] - 
+Invalid `prisma.verificationTokens.upsert()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:203:59
+
+  200 try {
+  201     const user = req.user;
+  202     const secretToken = crypto.randomBytes(20).toString("hex");
+→ 203     const tokenData = await prisma.verificationTokens.upsert({
+            where: {
+              userId: "jalaym123",
+          ?   id?: String,
+          ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   OR?: VerificationTokensWhereInput[],
+          ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   token?: StringFilter | String,
+          ?   expiresAt?: DateTimeFilter | DateTime,
+          ?   createdAt?: DateTimeFilter | DateTime,
+          ?   updatedAt?: DateTimeFilter | DateTime,
+          ?   user?: UsersNullableRelationFilter | UsersWhereInput | Null
+            },
+            update: {
+              userId: "jalaym123",
+              token: "264aa07c429fe8d372bd8475ff934d79444ab551",
+              expiration: new Date("2024-06-29T07:32:41.320Z")
+            },
+            create: {
+              sis_id: "jalaym123",
+              token: "264aa07c429fe8d372bd8475ff934d79444ab551",
+              expiration: new Date("2024-06-29T07:32:41.320Z")
+            }
+          })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 12:05:36 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:05:36 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:05:36 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:05:36 error: [/auth/sendVerificationMail] - 
+Invalid `prisma.verificationTokens.upsert()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:203:59
+
+  200 try {
+  201     const user = req.user;
+  202     const secretToken = crypto.randomBytes(20).toString("hex");
+→ 203     const tokenData = await prisma.verificationTokens.upsert({
+            where: {
+              userId: "jalaym123",
+          ?   id?: String,
+          ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   OR?: VerificationTokensWhereInput[],
+          ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   token?: StringFilter | String,
+          ?   expiresAt?: DateTimeFilter | DateTime,
+          ?   createdAt?: DateTimeFilter | DateTime,
+          ?   updatedAt?: DateTimeFilter | DateTime,
+          ?   user?: UsersNullableRelationFilter | UsersWhereInput | Null
+            },
+            update: {
+              userId: "jalaym123",
+              token: "5fcda1ab1d8548bacde0f18e775f5e21bd347d46",
+              expiration: new Date("2024-06-29T07:35:36.918Z")
+            },
+            create: {
+              sis_id: "jalaym123",
+              token: "5fcda1ab1d8548bacde0f18e775f5e21bd347d46",
+              expiration: new Date("2024-06-29T07:35:36.918Z")
+            }
+          })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 12:08:17 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:08:17 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:08:17 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:08:17 error: [/auth/sendVerificationMail] - 
+Invalid `prisma.verificationTokens.upsert()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:203:59
+
+  200 try {
+  201     const user = req.user;
+  202     const secretToken = crypto.randomBytes(20).toString("hex");
+→ 203     const tokenData = await prisma.verificationTokens.upsert({
+            where: {
+              userId: "jalaym123",
+          ?   id?: String,
+          ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   OR?: VerificationTokensWhereInput[],
+          ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   token?: StringFilter | String,
+          ?   expiresAt?: DateTimeFilter | DateTime,
+          ?   createdAt?: DateTimeFilter | DateTime,
+          ?   updatedAt?: DateTimeFilter | DateTime,
+          ?   user?: UsersNullableRelationFilter | UsersWhereInput | Null
+            },
+            update: {
+              userId: "jalaym123",
+              token: "65337c9a1762075a1549525b16691b7f23cc753c",
+              expiration: new Date("2024-06-29T07:38:17.988Z")
+            },
+            create: {
+              userId: "jalaym123",
+              token: "65337c9a1762075a1549525b16691b7f23cc753c",
+              expiration: new Date("2024-06-29T07:38:17.988Z")
+            }
+          })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 12:08:18 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:08:18 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:08:18 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:08:18 error: [/auth/sendVerificationMail] - 
+Invalid `prisma.verificationTokens.upsert()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:203:59
+
+  200 try {
+  201     const user = req.user;
+  202     const secretToken = crypto.randomBytes(20).toString("hex");
+→ 203     const tokenData = await prisma.verificationTokens.upsert({
+            where: {
+              userId: "jalaym123",
+          ?   id?: String,
+          ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   OR?: VerificationTokensWhereInput[],
+          ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   token?: StringFilter | String,
+          ?   expiresAt?: DateTimeFilter | DateTime,
+          ?   createdAt?: DateTimeFilter | DateTime,
+          ?   updatedAt?: DateTimeFilter | DateTime,
+          ?   user?: UsersNullableRelationFilter | UsersWhereInput | Null
+            },
+            update: {
+              userId: "jalaym123",
+              token: "f588ce1d997ca4bd9800688bb4a61a2983dc0d71",
+              expiration: new Date("2024-06-29T07:38:18.661Z")
+            },
+            create: {
+              userId: "jalaym123",
+              token: "f588ce1d997ca4bd9800688bb4a61a2983dc0d71",
+              expiration: new Date("2024-06-29T07:38:18.661Z")
+            }
+          })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 12:08:19 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:08:19 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:08:19 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:08:19 error: [/auth/sendVerificationMail] - 
+Invalid `prisma.verificationTokens.upsert()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:203:59
+
+  200 try {
+  201     const user = req.user;
+  202     const secretToken = crypto.randomBytes(20).toString("hex");
+→ 203     const tokenData = await prisma.verificationTokens.upsert({
+            where: {
+              userId: "jalaym123",
+          ?   id?: String,
+          ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   OR?: VerificationTokensWhereInput[],
+          ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   token?: StringFilter | String,
+          ?   expiresAt?: DateTimeFilter | DateTime,
+          ?   createdAt?: DateTimeFilter | DateTime,
+          ?   updatedAt?: DateTimeFilter | DateTime,
+          ?   user?: UsersNullableRelationFilter | UsersWhereInput | Null
+            },
+            update: {
+              userId: "jalaym123",
+              token: "2c1f8bc4d34e41cf799651b0567395027cea54b5",
+              expiration: new Date("2024-06-29T07:38:19.188Z")
+            },
+            create: {
+              userId: "jalaym123",
+              token: "2c1f8bc4d34e41cf799651b0567395027cea54b5",
+              expiration: new Date("2024-06-29T07:38:19.188Z")
+            }
+          })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 12:08:20 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:08:20 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:08:20 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:08:20 error: [/auth/sendVerificationMail] - 
+Invalid `prisma.verificationTokens.upsert()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:203:59
+
+  200 try {
+  201     const user = req.user;
+  202     const secretToken = crypto.randomBytes(20).toString("hex");
+→ 203     const tokenData = await prisma.verificationTokens.upsert({
+            where: {
+              userId: "jalaym123",
+          ?   id?: String,
+          ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   OR?: VerificationTokensWhereInput[],
+          ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   token?: StringFilter | String,
+          ?   expiresAt?: DateTimeFilter | DateTime,
+          ?   createdAt?: DateTimeFilter | DateTime,
+          ?   updatedAt?: DateTimeFilter | DateTime,
+          ?   user?: UsersNullableRelationFilter | UsersWhereInput | Null
+            },
+            update: {
+              userId: "jalaym123",
+              token: "f9a0adbfb8ef4258a02f886284dfec9301ee9f88",
+              expiration: new Date("2024-06-29T07:38:20.082Z")
+            },
+            create: {
+              userId: "jalaym123",
+              token: "f9a0adbfb8ef4258a02f886284dfec9301ee9f88",
+              expiration: new Date("2024-06-29T07:38:20.082Z")
+            }
+          })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 12:08:20 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:08:20 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:08:20 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:08:20 error: [/auth/sendVerificationMail] - 
+Invalid `prisma.verificationTokens.upsert()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:203:59
+
+  200 try {
+  201     const user = req.user;
+  202     const secretToken = crypto.randomBytes(20).toString("hex");
+→ 203     const tokenData = await prisma.verificationTokens.upsert({
+            where: {
+              userId: "jalaym123",
+          ?   id?: String,
+          ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   OR?: VerificationTokensWhereInput[],
+          ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   token?: StringFilter | String,
+          ?   expiresAt?: DateTimeFilter | DateTime,
+          ?   createdAt?: DateTimeFilter | DateTime,
+          ?   updatedAt?: DateTimeFilter | DateTime,
+          ?   user?: UsersNullableRelationFilter | UsersWhereInput | Null
+            },
+            update: {
+              userId: "jalaym123",
+              token: "b07c2159bdf8d2c7c7acb7462168500e0f031f62",
+              expiration: new Date("2024-06-29T07:38:20.676Z")
+            },
+            create: {
+              userId: "jalaym123",
+              token: "b07c2159bdf8d2c7c7acb7462168500e0f031f62",
+              expiration: new Date("2024-06-29T07:38:20.676Z")
+            }
+          })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 12:08:21 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:08:21 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:08:21 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:08:21 error: [/auth/sendVerificationMail] - 
+Invalid `prisma.verificationTokens.upsert()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:203:59
+
+  200 try {
+  201     const user = req.user;
+  202     const secretToken = crypto.randomBytes(20).toString("hex");
+→ 203     const tokenData = await prisma.verificationTokens.upsert({
+            where: {
+              userId: "jalaym123",
+          ?   id?: String,
+          ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   OR?: VerificationTokensWhereInput[],
+          ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+          ?   token?: StringFilter | String,
+          ?   expiresAt?: DateTimeFilter | DateTime,
+          ?   createdAt?: DateTimeFilter | DateTime,
+          ?   updatedAt?: DateTimeFilter | DateTime,
+          ?   user?: UsersNullableRelationFilter | UsersWhereInput | Null
+            },
+            update: {
+              userId: "jalaym123",
+              token: "d9134df60cfb2f1095025f451dc2d2f464176dac",
+              expiration: new Date("2024-06-29T07:38:21.683Z")
+            },
+            create: {
+              userId: "jalaym123",
+              token: "d9134df60cfb2f1095025f451dc2d2f464176dac",
+              expiration: new Date("2024-06-29T07:38:21.683Z")
+            }
+          })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
+29-06-2024 12:34:01 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:34:01 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:34:01 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:34:01 error: [/middleware/mailSent] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/utils/middleware.js:132:57
+
+  129 
+  130 const mailSent = async (req, res, next) => {
+  131     try {
+→ 132         let tokenData = await prisma.verificationTokens.findUnique({
+                where: {
+                  id: "jalaym123",
+                  ~~
+              ?   userId?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   token?: StringFilter | String,
+              ?   expiresAt?: DateTimeFilter | DateTime,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Unknown argument `id`. Did you mean `OR`? Available options are marked with ?.
+29-06-2024 12:34:16 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:34:16 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:34:16 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:34:16 error: [/auth/sendVerificationMail] - 
+Invalid `prisma.verificationTokens.upsert()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:203:59
+
+  200 try {
+  201     const user = req.user;
+  202     const secretToken = crypto.randomBytes(20).toString("hex");
+→ 203     const tokenData = await prisma.verificationTokens.upsert({
+            where: {
+              userId: "jalaym123"
+            },
+            update: {
+              userId: "jalaym123",
+              token: "b89444604936187033c6927dd852c19f3ea12383",
+              expiration: new Date("2024-06-29T08:04:16.223Z")
+            },
+            create: {
+              userId: "jalaym123",
+              token: "b89444604936187033c6927dd852c19f3ea12383",
+              expiration: new Date("2024-06-29T08:04:16.223Z"),
+          +   expiresAt: DateTime
+            }
+          })
+
+Argument `expiresAt` is missing.
+29-06-2024 12:34:33 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:34:34 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:34:34 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:34:34 error: [/auth/sendVerificationMail] - Missing credentials for "PLAIN"
+29-06-2024 12:35:58 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:35:58 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:35:58 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:35:59 error: [/auth/sendVerificationMail] - Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-1fac1535b6esm25908985ad.156 - gsmtp
+29-06-2024 12:36:31 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:36:31 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:36:31 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:36:33 error: [/auth/sendVerificationMail] - Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-1fac10d14c1sm26722655ad.12 - gsmtp
+29-06-2024 12:38:33 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:38:33 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:38:33 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:38:34 error: [/auth/sendVerificationMail] - Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-1fac15789b7sm25974275ad.239 - gsmtp
+29-06-2024 12:45:02 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:45:02 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:45:02 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:45:04 error: [/auth/sendVerificationMail] - No recipients defined
+29-06-2024 12:46:01 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:46:01 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:46:01 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:46:03 error: [/auth/sendVerificationMail] - No recipients defined
+29-06-2024 12:46:19 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:46:19 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:46:19 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:46:20 error: [/auth/sendVerificationMail] - No recipients defined
+29-06-2024 12:48:27 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:48:27 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:48:27 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:48:28 error: [/auth/sendVerificationMail] - No recipients defined
+29-06-2024 12:52:15 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:52:15 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:52:15 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:52:19 info: [/auth/sendVerificationMail] - success - jalaym123
+29-06-2024 12:52:19 debug: [/auth/sendVerificationMail] - id: jalaym123
+29-06-2024 12:52:54 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:52:54 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:52:54 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:52:57 info: [/auth/sendVerificationMail] - success - jalaym123
+29-06-2024 12:52:57 debug: [/auth/sendVerificationMail] - id: jalaym123
+29-06-2024 12:53:30 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:53:30 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:53:30 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:53:30 warn: [/middleWare/mailSent] - verification mail already sent
+29-06-2024 12:53:30 debug: [/middleWare/mailSent] - email: jalaym123@gmail.com
+29-06-2024 12:53:42 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 12:53:42 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 12:53:42 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 12:53:45 info: [/auth/sendVerificationMail] - success - jalaym123
+29-06-2024 12:53:45 debug: [/auth/sendVerificationMail] - id: jalaym123
+29-06-2024 12:58:56 error: [/auth/verify] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:155:67
+
+  152 const verify = async (req, res, next) => {
+  153     try {
+  154         const { token } = req.params;
+→ 155         const verificationToken = await prisma.verificationTokens.findUnique({
+                where: {
+                  token: "a9d6d59cae0aef7bc601209c16b09b9eff02a72c",
+              ?   userId?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   expiresAt?: DateTimeFilter | DateTime,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `userId` arguments. Available options are marked with ?.
+29-06-2024 13:01:35 error: [/auth/verify] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:155:67
+
+  152 const verify = async (req, res, next) => {
+  153     try {
+  154         const { token } = req.params;
+→ 155         const verificationToken = await prisma.verificationTokens.findUnique({
+                where: {
+                  token: "a9d6d59cae0aef7bc601209c16b09b9eff02a72c",
+              ?   userId?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   expiresAt?: DateTimeFilter | DateTime,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `userId` arguments. Available options are marked with ?.
+29-06-2024 13:01:36 error: [/auth/verify] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:155:67
+
+  152 const verify = async (req, res, next) => {
+  153     try {
+  154         const { token } = req.params;
+→ 155         const verificationToken = await prisma.verificationTokens.findUnique({
+                where: {
+                  token: "a9d6d59cae0aef7bc601209c16b09b9eff02a72c",
+              ?   userId?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   expiresAt?: DateTimeFilter | DateTime,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `userId` arguments. Available options are marked with ?.
+29-06-2024 13:02:10 error: [/auth/verify] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:155:67
+
+  152 const verify = async (req, res, next) => {
+  153     try {
+  154         const { token } = req.params;
+→ 155         const verificationToken = await prisma.verificationTokens.findUnique({
+                where: {
+                  token: "a9d6d59cae0aef7bc601209c16b09b9eff02a72c",
+              ?   userId?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   expiresAt?: DateTimeFilter | DateTime,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `userId` arguments. Available options are marked with ?.
+29-06-2024 13:47:22 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 13:47:22 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 13:47:22 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 13:47:22 warn: [/middleWare/mailSent] - verification mail already sent
+29-06-2024 13:47:22 debug: [/middleWare/mailSent] - email: jalaym123@gmail.com
+29-06-2024 13:47:32 info: [/middleware/isUser] - user: jalaym123 found
+29-06-2024 13:47:32 debug: [/middleware/iseNotVerified] - user: jalaym123.
+29-06-2024 13:47:32 info: [/middleware/iseNotVerified] - user: jalaym123 is not verified
+29-06-2024 13:47:35 info: [/auth/sendVerificationMail] - success - jalaym123
+29-06-2024 13:47:35 debug: [/auth/sendVerificationMail] - id: jalaym123
+29-06-2024 13:48:07 error: [/auth/verify] - 
+Invalid `prisma.verificationTokens.findUnique()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:155:67
+
+  152 const verify = async (req, res, next) => {
+  153     try {
+  154         const { token } = req.params;
+→ 155         const verificationToken = await prisma.verificationTokens.findUnique({
+                where: {
+                  token: "d5d5e60978c29696853bbd0288c3c44ebc517b10",
+              ?   userId?: String,
+              ?   AND?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   OR?: VerificationTokensWhereInput[],
+              ?   NOT?: VerificationTokensWhereInput | VerificationTokensWhereInput[],
+              ?   expiresAt?: DateTimeFilter | DateTime,
+              ?   createdAt?: DateTimeFilter | DateTime,
+              ?   updatedAt?: DateTimeFilter | DateTime,
+              ?   user?: UsersRelationFilter | UsersWhereInput
+                }
+              })
+
+Argument `where` of type VerificationTokensWhereUniqueInput needs at least one of `userId` arguments. Available options are marked with ?.
+29-06-2024 13:48:32 error: [/auth/verify] - 
+Invalid `prisma.users.update()` invocation in
+/Users/jalaymovaliya/Odoo-Project/src/api/auth/controller.js:174:41
+
+  171         error: "Token expired",
+  172     });
+  173 }
+→ 174 const user = await prisma.users.update({
+        where: {
+          id: undefined,
+      ?   sys_id?: String,
+      ?   email?: String,
+      ?   AND?: UsersWhereInput | UsersWhereInput[],
+      ?   OR?: UsersWhereInput[],
+      ?   NOT?: UsersWhereInput | UsersWhereInput[],
+      ?   name?: StringFilter | String,
+      ?   password?: StringFilter | String,
+      ?   type?: EnumUserTypeFilter | UserType,
+      ?   phoneNumber?: StringFilter | String,
+      ?   address?: StringNullableFilter | String | Null,
+      ?   city?: StringNullableFilter | String | Null,
+      ?   state?: StringNullableFilter | String | Null,
+      ?   zipCode?: StringNullableFilter | String | Null,
+      ?   country?: StringNullableFilter | String | Null,
+      ?   createdAt?: DateTimeFilter | DateTime,
+      ?   updatedAt?: DateTimeFilter | DateTime,
+      ?   isVerified?: BoolFilter | Boolean,
+      ?   collectionRequests?: CollectionRequestListRelationFilter,
+      ?   payments?: PaymentListRelationFilter,
+      ?   recycler?: RecyclerNullableRelationFilter | RecyclerWhereInput | Null,
+      ?   verificationTokens?: VerificationTokensListRelationFilter
+        },
+        data: {
+          isVerified: true
+        }
+      })
+
+Argument `where` of type UsersWhereUniqueInput needs at least one of `sys_id`, `id` or `email` arguments. Available options are marked with ?.
+29-06-2024 13:49:02 info: [/auth/verify] - success - jalaym123
+29-06-2024 13:49:02 debug: [/auth/verify] - id: jalaym123

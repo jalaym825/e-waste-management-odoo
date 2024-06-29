@@ -1,0 +1,132 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserType {
+  INDIVIDUALS
+  BUSINESS
+  RECYCLERS
+}
+
+enum CollectionStatus {
+  PENDING
+  SCHEDULED
+  COMPLETED
+  CANCELLED
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+}
+
+model Users {
+  id                 String               @unique
+  sys_id             String               @id @default(uuid())
+  email              String               @unique
+  name               String
+  password           String
+  type               UserType             @default(INDIVIDUALS)
+  phoneNumber        String
+  address            String?
+  city               String?
+  state              String?
+  zipCode            String?
+  country            String?
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+  isVerified         Boolean              @default(false)
+  collectionRequests CollectionRequest[]
+  payments           Payment[]
+  recycler           Recycler?
+  verificationTokens VerificationTokens[] @relation("verificationTokens")
+}
+
+model CollectionRequest {
+  id                  String                  @id @default(uuid())
+  userId              String
+  user                Users                   @relation(fields: [userId], references: [id])
+  preferredPickupDate DateTime
+  status              CollectionStatus        @default(PENDING)
+  createdAt           DateTime                @default(now())
+  updatedAt           DateTime                @updatedAt
+  payment             Payment?
+  items               CollectionRequestItem[]
+}
+
+model Item {
+  id                     String                  @id @default(uuid())
+  name                   String
+  description            String?
+  createdAt              DateTime                @default(now())
+  updatedAt              DateTime                @updatedAt
+  collectionRequestItems CollectionRequestItem[]
+}
+
+model CollectionRequestItem {
+  id                  String            @id @default(uuid())
+  collectionRequestId String
+  collectionRequest   CollectionRequest @relation(fields: [collectionRequestId], references: [id])
+  itemId              String
+  item                Item              @relation(fields: [itemId], references: [id])
+  quantity            Int
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime          @updatedAt
+
+  @@unique([collectionRequestId, itemId])
+}
+
+model Recycler {
+  id       String    @id @default(uuid())
+  userId   String    @unique
+  user     Users     @relation(fields: [userId], references: [id])
+  services Service[]
+}
+
+model Service {
+  id                 String              @id @default(uuid())
+  recyclerId         String
+  recycler           Recycler            @relation(fields: [recyclerId], references: [id])
+  name               String
+  description        String
+  serviceArea        String
+  processingMethods  String
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+  acceptedWasteTypes AcceptedWasteType[]
+}
+
+model Payment {
+  id                  String             @id @default(uuid())
+  userId              String
+  user                Users              @relation(fields: [userId], references: [id])
+  collectionRequestId String?            @unique
+  collectionRequest   CollectionRequest? @relation(fields: [collectionRequestId], references: [id])
+  amount              Float
+  status              PaymentStatus      @default(PENDING)
+  transactionId       String
+  createdAt           DateTime           @default(now())
+  updatedAt           DateTime           @updatedAt
+}
+
+model AcceptedWasteType {
+  id        String  @id @default(uuid())
+  type      String
+  serviceId String
+  service   Service @relation(fields: [serviceId], references: [id])
+}
+
+model VerificationTokens {
+  userId    String @id
+  user      Users    @relation("verificationTokens", fields: [userId], references: [id])
+  token     String @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
