@@ -1092,3 +1092,326 @@ Invalid `prisma.users.update()` invocation in
 Argument `where` of type UsersWhereUniqueInput needs at least one of `sys_id`, `id` or `email` arguments. Available options are marked with ?.
 29-06-2024 13:49:02 info: [/auth/verify] - success - jalaym123
 29-06-2024 13:49:02 debug: [/auth/verify] - id: jalaym123
+29-06-2024 15:02:57 error: [/auth/register] - id is not defined
+29-06-2024 15:03:10 error: [/auth/register] - newuser is not defined
+29-06-2024 15:03:38 info: [/auth/register] - success - 5f065d5e-0e10-4e4b-ac75-89ee7eee5ae8
+29-06-2024 15:03:38 error: [/auth/register] - id is not defined
+29-06-2024 15:05:06 warn: [/auth/register] - email already exists
+29-06-2024 15:05:06 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:05:26 warn: [/auth/register] - email already exists
+29-06-2024 15:05:26 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:06:36 warn: [/auth/register] - email already exists
+29-06-2024 15:06:36 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:07:44 warn: [/auth/register] - email already exists
+29-06-2024 15:07:44 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:08:25 warn: [/auth/register] - email already exists
+29-06-2024 15:08:25 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:08:32 info: [/auth/register] - success - 8b5f756d-b612-4cc4-bd90-58b6c656e415
+29-06-2024 15:08:32 error: [/auth/register] - id is not defined
+29-06-2024 15:08:48 info: [/auth/register] - success - fcaee627-3d3a-4a42-af12-c94a506b9571
+29-06-2024 15:08:48 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:08:48 error: [/auth/register] - newuser is not defined
+29-06-2024 15:09:01 warn: [/auth/register] - email already exists
+29-06-2024 15:09:01 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:09:08 info: [/auth/register] - success - fd874294-60a5-44e7-82f0-4c2699e0d160
+29-06-2024 15:09:08 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:09:08 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         token: "52a8cffc076d716eb9d63115d0c8fab9f0bdf9a0",
+         expiration: new Date("2024-06-30T09:39:08.186Z"),
+         user_id: undefined,
+     +   expiresAt: DateTime
+       }
+     })
+
+Argument `expiresAt` is missing.
+29-06-2024 15:10:06 warn: [/auth/register] - email already exists
+29-06-2024 15:10:06 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:10:22 info: [/auth/register] - success - 0b902c7c-1776-43be-92b6-bf5d92f0dfc1
+29-06-2024 15:10:22 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:10:22 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         token: "a0afe3b25c976eb0db0fc124f61289d0d4b127b2",
+         expiration: new Date("2024-06-30T09:40:22.002Z"),
+         userSysId: undefined,
+     +   expiresAt: DateTime
+       }
+     })
+
+Argument `expiresAt` is missing.
+29-06-2024 15:10:52 info: [/auth/register] - success - 1372dafb-d083-44e2-9cdf-2095955cb458
+29-06-2024 15:10:52 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:10:52 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "afdf2cc6d2540baf4f124e0876735bd56ff1da2f",
+         expiresAt: new Date("2024-06-30T09:40:52.140Z"),
+     +   user: {
+     +     create: UsersCreateWithoutVerificationTokensInput | UsersUncheckedCreateWithoutVerificationTokensInput,
+     +     connectOrCreate: UsersCreateOrConnectWithoutVerificationTokensInput,
+     +     connect: UsersWhereUniqueInput
+     +   }
+       }
+     })
+
+Argument `user` is missing.
+29-06-2024 15:11:20 warn: [/auth/register] - email already exists
+29-06-2024 15:11:20 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:11:27 info: [/auth/register] - success - 39002222-dc69-4154-aa7d-9dd4f4158bc7
+29-06-2024 15:11:27 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:11:27 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "23e0fb8905c316e0dec554ec6a81c4dbd67d6593",
+         expiresAt: new Date("2024-06-30T09:41:27.690Z"),
+     +   user: {
+     +     create: UsersCreateWithoutVerificationTokensInput | UsersUncheckedCreateWithoutVerificationTokensInput,
+     +     connectOrCreate: UsersCreateOrConnectWithoutVerificationTokensInput,
+     +     connect: UsersWhereUniqueInput
+     +   }
+       }
+     })
+
+Argument `user` is missing.
+29-06-2024 15:13:39 warn: [/auth/register] - email already exists
+29-06-2024 15:13:39 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:13:45 info: [/auth/register] - success - 0fbd9cab-1879-453c-a240-2452a2c443a2
+29-06-2024 15:13:45 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:13:45 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "30d1e16e991cc330e88a51e8d5d833893a797170",
+         expiresAt: new Date("2024-06-30T09:43:45.840Z"),
+     +   user: {
+     +     create: UsersCreateWithoutVerificationTokensInput | UsersUncheckedCreateWithoutVerificationTokensInput,
+     +     connectOrCreate: UsersCreateOrConnectWithoutVerificationTokensInput,
+     +     connect: UsersWhereUniqueInput
+     +   }
+       }
+     })
+
+Argument `user` is missing.
+29-06-2024 15:15:17 warn: [/auth/register] - email already exists
+29-06-2024 15:15:17 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:15:25 info: [/auth/register] - success - 2ea54476-efad-4a5a-af6d-966b2026686f
+29-06-2024 15:15:25 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:15:25 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "02c0ee95fe8153cc8411ebc658e050e2a48562c8",
+         expiresAt: new Date("2024-06-30T09:45:25.568Z"),
+     +   expiration: DateTime
+       }
+     })
+
+Argument `expiration` is missing.
+29-06-2024 15:15:54 warn: [/auth/register] - email already exists
+29-06-2024 15:15:54 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:16:02 info: [/auth/register] - success - 41c2e1f0-6b5a-492d-a054-a28b227858c6
+29-06-2024 15:16:02 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:16:02 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "020bbe03f028276042df029ff29b1e7f65811b76",
+         expiresAt: new Date("2024-06-30T09:46:02.457Z"),
+     +   expiration: DateTime
+       }
+     })
+
+Argument `expiration` is missing.
+29-06-2024 15:16:32 warn: [/auth/register] - email already exists
+29-06-2024 15:16:32 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:16:39 info: [/auth/register] - success - 62ff73db-988e-40d0-a959-0e379247165d
+29-06-2024 15:16:39 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:16:39 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "82e638fe665e29e07814574fd8684d74e4e7fb6a",
+         expiresAt: new Date("2024-06-30T09:46:39.638Z"),
+     +   user: {
+     +     create: UsersCreateWithoutVerificationTokensInput | UsersUncheckedCreateWithoutVerificationTokensInput,
+     +     connectOrCreate: UsersCreateOrConnectWithoutVerificationTokensInput,
+     +     connect: UsersWhereUniqueInput
+     +   }
+       }
+     })
+
+Argument `user` is missing.
+29-06-2024 15:18:26 warn: [/auth/register] - email already exists
+29-06-2024 15:18:26 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:18:32 info: [/auth/register] - success - 727c536d-b463-4ec3-a225-0847d2735e7c
+29-06-2024 15:18:32 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:18:32 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "34147219b20453ee19cb4cb9eee13ed81a22c485",
+         expiresAt: new Date("2024-06-30T09:48:32.672Z"),
+     +   user: {
+     +     create: UsersCreateWithoutVerificationTokensInput | UsersUncheckedCreateWithoutVerificationTokensInput,
+     +     connectOrCreate: UsersCreateOrConnectWithoutVerificationTokensInput,
+     +     connect: UsersWhereUniqueInput
+     +   }
+       }
+     })
+
+Argument `user` is missing.
+29-06-2024 15:18:56 warn: [/auth/register] - email already exists
+29-06-2024 15:18:56 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:19:02 info: [/auth/register] - success - ed3da27d-e305-4db6-a952-9ef2af66610d
+29-06-2024 15:19:02 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:19:02 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "5e923a72640a0f3160b9128c5530d50e4e32cae6",
+         expiration: new Date("2024-06-30T09:49:02.909Z"),
+     +   expiresAt: DateTime
+       }
+     })
+
+Argument `expiresAt` is missing.
+29-06-2024 15:21:22 warn: [/auth/register] - email already exists
+29-06-2024 15:21:22 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:21:31 info: [/auth/register] - success - 3ff6570c-218b-48c3-992f-3ee1de11781b
+29-06-2024 15:21:31 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:21:31 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "9824366c635d42e4511d4247d317ad6c9cd0ab95",
+         expiresAt: new Date("2024-06-30T09:51:31.237Z"),
+     +   user: {
+     +     create: UsersCreateWithoutVerificationTokensInput | UsersUncheckedCreateWithoutVerificationTokensInput,
+     +     connectOrCreate: UsersCreateOrConnectWithoutVerificationTokensInput,
+     +     connect: UsersWhereUniqueInput
+     +   }
+       }
+     })
+
+Argument `user` is missing.
+29-06-2024 15:24:37 info: [/auth/register] - success - 6d1124a8-33fb-47bb-9977-dd71a0183c4b
+29-06-2024 15:24:37 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:24:39 error: [/auth/register] - Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-1fac1535e01sm29563875ad.163 - gsmtp
+29-06-2024 15:25:27 info: [/auth/register] - success - a3b8215d-30dd-4c39-984f-4d148baa73dc
+29-06-2024 15:25:27 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:25:28 error: [/auth/register] - Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-72c6b584624sm2376835a12.53 - gsmtp
+29-06-2024 15:25:42 warn: [/auth/register] - email already exists
+29-06-2024 15:25:43 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:25:53 info: [/auth/register] - success - 41a3f450-781f-4fd1-8a4d-7072e8c5c00e
+29-06-2024 15:25:53 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:25:55 error: [/auth/register] - No recipients defined
+29-06-2024 15:26:40 warn: [/auth/register] - email already exists
+29-06-2024 15:26:40 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:26:47 info: [/auth/register] - success - b631b9fb-3879-4844-890a-e53ab01269c4
+29-06-2024 15:26:47 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:26:48 error: [/auth/register] - No recipients defined
+29-06-2024 15:27:34 info: [/auth/register] - success - 6f2c9ea9-e979-4e12-b1cc-450a552afb02
+29-06-2024 15:27:34 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:27:35 error: [/auth/register] - No recipients defined
+29-06-2024 15:28:35 info: [/auth/register] - success - e41d2cae-8c9f-4eb3-b9fc-d017753d8812
+29-06-2024 15:28:35 debug: [/auth/register] - email: 22ce070@charusat.edu.in
+29-06-2024 15:29:23 info: [/auth/register] - success - ac34c152-4067-42a0-b768-96a937b9ef61
+29-06-2024 15:29:23 debug: [/auth/register] - email: jalaym123@gmail.com
+29-06-2024 15:30:59 info: [/auth/register] - success - 3d3cc48f-d3b8-4d59-ba2e-c5115c72e495
+29-06-2024 15:30:59 debug: [/auth/register] - email: 22ce071@charusat.edu.in
+29-06-2024 15:36:17 error: [/auth/login] - secretOrPrivateKey must have a value
+29-06-2024 15:37:38 error: [/auth/login] - secretOrPrivateKey must have a value
+29-06-2024 15:37:44 info: [/auth/login] - success - 3d3cc48f-d3b8-4d59-ba2e-c5115c72e495
+29-06-2024 15:37:44 debug: [/auth/login] - email: 22ce071@charusat.edu.in
+29-06-2024 15:38:07 info: [/auth/login] - success - 3d3cc48f-d3b8-4d59-ba2e-c5115c72e495
+29-06-2024 15:38:07 debug: [/auth/login] - email: 22ce071@charusat.edu.in
+29-06-2024 15:38:10 info: [/auth/login] - success - 3d3cc48f-d3b8-4d59-ba2e-c5115c72e495
+29-06-2024 15:38:10 debug: [/auth/login] - email: 22ce071@charusat.edu.in
+29-06-2024 15:39:17 info: [/auth/login] - success - 3d3cc48f-d3b8-4d59-ba2e-c5115c72e495
+29-06-2024 15:39:17 debug: [/auth/login] - email: 22ce071@charusat.edu.in
+29-06-2024 15:39:19 info: [/auth/login] - success - 3d3cc48f-d3b8-4d59-ba2e-c5115c72e495
+29-06-2024 15:39:19 debug: [/auth/login] - email: 22ce071@charusat.edu.in
+29-06-2024 15:39:21 info: [/auth/login] - success - 3d3cc48f-d3b8-4d59-ba2e-c5115c72e495
+29-06-2024 15:39:21 debug: [/auth/login] - email: 22ce071@charusat.edu.in
+29-06-2024 15:39:36 info: [/auth/login] - success - 3d3cc48f-d3b8-4d59-ba2e-c5115c72e495
+29-06-2024 15:39:36 debug: [/auth/login] - email: 22ce071@charusat.edu.in
+29-06-2024 15:39:57 warn: [/auth/login] - invalid password
+29-06-2024 15:39:57 debug: [/auth/login] - email: 22ce071@charusat.edu.in
+29-06-2024 15:40:07 warn: [/auth/login] - invalid password
+29-06-2024 15:40:07 debug: [/auth/login] - email: 22ce071@charusat.edu.in
+29-06-2024 15:40:08 warn: [/auth/login] - invalid password
+29-06-2024 15:40:08 debug: [/auth/login] - email: 22ce071@charusat.edu.in
+29-06-2024 15:40:21 info: [/auth/login] - success - 3d3cc48f-d3b8-4d59-ba2e-c5115c72e495
+29-06-2024 15:40:21 debug: [/auth/login] - email: 22ce071@charusat.edu.in

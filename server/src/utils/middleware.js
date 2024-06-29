@@ -41,7 +41,7 @@ const verifyJWT = async (req, res, next) => {
         const payload = await jwt.verify(token.toString(), process.env.JWT_SECRET);
         const user = await prisma.users.findUnique({
             where: {
-                id: payload.id
+                sys_id: payload.id
             }
         });
 
@@ -62,46 +62,22 @@ const verifyJWT = async (req, res, next) => {
     }
 }
 
-const isSportsHead = async (req, res, next) => {
-    try {
-        logger.debug(`[/middleware/isSportsHead] - user: ${req.user.id}, role: ${req.user.roles}`);
-        if (!req.user.roles.includes('SPORTS_HEAD')) {
-            logger.warn(`[/middleware/isSportsHead] - unauthorized access by user: ${req.user.id}`);
-            return res.status(401).json({
-                error: 'Unauthorized access.'
-            });
-        }
-        logger.info(`[/middleware/isSportsHead] - user: ${req.user.id} authorized`);
-        next();
-    } catch (error) {
-        logger.error(`[/middleware/isSportsHead] - ${error.message}`);
-        return res.status(500).json({
-            error: 'Failed to authenticate token.'
-        });
-    }
-}
-
 const isUser = async (req, res, next) => {
     try {
-        const { emailOrId } = req.body;
+        const { email } = req.body;
         let user = await prisma.users.findUnique({
             where: {
-                email: emailOrId.toLowerCase(),
-            },
-        });
-        user = user || await prisma.users.findUnique({
-            where: {
-                id: emailOrId.toLowerCase(),
+                email: email.toLowerCase(),
             },
         });
         if (!user) {
             logger.warn(`[/middleware/isUser] - user not found`);
-            logger.debug(`[/middleware/isUser] - emailOrId: ${emailOrId}`);
+            logger.debug(`[/middleware/isUser] - email: ${email}`);
             return res.status(400).json({
                 error: "User not found",
             });
         }
-        logger.info(`[/middleware/isUser] - user: ${user.id} found`);
+        logger.info(`[/middleware/isUser] - user: ${user.sys_id} found`);
         req.user = user;
         next();
     } catch (error) {
@@ -112,14 +88,14 @@ const isUser = async (req, res, next) => {
 
 const isNotVerified = async (req, res, next) => {
     try {
-        logger.debug(`[/middleware/iseNotVerified] - user: ${req.user.id}.`);
+        logger.debug(`[/middleware/iseNotVerified] - user: ${req.user.sys_id}.`);
         if (req.user.isVerified === true) {
-            logger.warn(`[/middleware/iseNotVerified] - user: ${req.user.id} is already verified`);
+            logger.warn(`[/middleware/iseNotVerified] - user: ${req.user.sys_id} is already verified`);
             return res.status(400).json({
                 error: 'User is already verified.'
             });
         }
-        logger.info(`[/middleware/iseNotVerified] - user: ${req.user.id} is not verified`);
+        logger.info(`[/middleware/iseNotVerified] - user: ${req.user.sys_id} is not verified`);
         next();
     } catch (error) {
         logger.error(`[/middleware/iseNotVerified] - ${error.message}`);
@@ -131,7 +107,7 @@ const mailSent = async (req, res, next) => {
     try {
         let tokenData = await prisma.verificationTokens.findUnique({
             where: {
-                userId: req.user.id,
+                userSysId: req.user.sys_id,
             },
         });
         if (tokenData && tokenData.expiresAt > new Date()) {
@@ -152,7 +128,6 @@ const mailSent = async (req, res, next) => {
 
 module.exports = {
     verifyJWT,
-    isSportsHead,
     isUser,
     isNotVerified,
     mailSent,

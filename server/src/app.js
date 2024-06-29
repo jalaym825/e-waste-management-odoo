@@ -16,7 +16,8 @@ const server = http.createServer(app);
 app.use(morgan("[:date[clf]] :method :url :status :res[content-length] - :response-time ms"));
 
 app.use(cors({
-  origin: '*',
+  origin: 'http://localhost:5173', // Replace with your frontend origin
+  credentials: true,
 }));
 app.use(express.json());
 app.use(helmet());

@@ -933,3 +933,228 @@ Invalid `prisma.users.update()` invocation in
       })
 
 Argument `where` of type UsersWhereUniqueInput needs at least one of `sys_id`, `id` or `email` arguments. Available options are marked with ?.
+29-06-2024 15:02:57 error: [/auth/register] - id is not defined
+29-06-2024 15:03:10 error: [/auth/register] - newuser is not defined
+29-06-2024 15:03:38 error: [/auth/register] - id is not defined
+29-06-2024 15:08:32 error: [/auth/register] - id is not defined
+29-06-2024 15:08:48 error: [/auth/register] - newuser is not defined
+29-06-2024 15:09:08 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         token: "52a8cffc076d716eb9d63115d0c8fab9f0bdf9a0",
+         expiration: new Date("2024-06-30T09:39:08.186Z"),
+         user_id: undefined,
+     +   expiresAt: DateTime
+       }
+     })
+
+Argument `expiresAt` is missing.
+29-06-2024 15:10:22 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         token: "a0afe3b25c976eb0db0fc124f61289d0d4b127b2",
+         expiration: new Date("2024-06-30T09:40:22.002Z"),
+         userSysId: undefined,
+     +   expiresAt: DateTime
+       }
+     })
+
+Argument `expiresAt` is missing.
+29-06-2024 15:10:52 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "afdf2cc6d2540baf4f124e0876735bd56ff1da2f",
+         expiresAt: new Date("2024-06-30T09:40:52.140Z"),
+     +   user: {
+     +     create: UsersCreateWithoutVerificationTokensInput | UsersUncheckedCreateWithoutVerificationTokensInput,
+     +     connectOrCreate: UsersCreateOrConnectWithoutVerificationTokensInput,
+     +     connect: UsersWhereUniqueInput
+     +   }
+       }
+     })
+
+Argument `user` is missing.
+29-06-2024 15:11:27 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "23e0fb8905c316e0dec554ec6a81c4dbd67d6593",
+         expiresAt: new Date("2024-06-30T09:41:27.690Z"),
+     +   user: {
+     +     create: UsersCreateWithoutVerificationTokensInput | UsersUncheckedCreateWithoutVerificationTokensInput,
+     +     connectOrCreate: UsersCreateOrConnectWithoutVerificationTokensInput,
+     +     connect: UsersWhereUniqueInput
+     +   }
+       }
+     })
+
+Argument `user` is missing.
+29-06-2024 15:13:45 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "30d1e16e991cc330e88a51e8d5d833893a797170",
+         expiresAt: new Date("2024-06-30T09:43:45.840Z"),
+     +   user: {
+     +     create: UsersCreateWithoutVerificationTokensInput | UsersUncheckedCreateWithoutVerificationTokensInput,
+     +     connectOrCreate: UsersCreateOrConnectWithoutVerificationTokensInput,
+     +     connect: UsersWhereUniqueInput
+     +   }
+       }
+     })
+
+Argument `user` is missing.
+29-06-2024 15:15:25 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "02c0ee95fe8153cc8411ebc658e050e2a48562c8",
+         expiresAt: new Date("2024-06-30T09:45:25.568Z"),
+     +   expiration: DateTime
+       }
+     })
+
+Argument `expiration` is missing.
+29-06-2024 15:16:02 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "020bbe03f028276042df029ff29b1e7f65811b76",
+         expiresAt: new Date("2024-06-30T09:46:02.457Z"),
+     +   expiration: DateTime
+       }
+     })
+
+Argument `expiration` is missing.
+29-06-2024 15:16:39 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "82e638fe665e29e07814574fd8684d74e4e7fb6a",
+         expiresAt: new Date("2024-06-30T09:46:39.638Z"),
+     +   user: {
+     +     create: UsersCreateWithoutVerificationTokensInput | UsersUncheckedCreateWithoutVerificationTokensInput,
+     +     connectOrCreate: UsersCreateOrConnectWithoutVerificationTokensInput,
+     +     connect: UsersWhereUniqueInput
+     +   }
+       }
+     })
+
+Argument `user` is missing.
+29-06-2024 15:18:32 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "34147219b20453ee19cb4cb9eee13ed81a22c485",
+         expiresAt: new Date("2024-06-30T09:48:32.672Z"),
+     +   user: {
+     +     create: UsersCreateWithoutVerificationTokensInput | UsersUncheckedCreateWithoutVerificationTokensInput,
+     +     connectOrCreate: UsersCreateOrConnectWithoutVerificationTokensInput,
+     +     connect: UsersWhereUniqueInput
+     +   }
+       }
+     })
+
+Argument `user` is missing.
+29-06-2024 15:19:02 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "5e923a72640a0f3160b9128c5530d50e4e32cae6",
+         expiration: new Date("2024-06-30T09:49:02.909Z"),
+     +   expiresAt: DateTime
+       }
+     })
+
+Argument `expiresAt` is missing.
+29-06-2024 15:21:31 error: [/auth/register] - 
+Invalid `prisma.verificationTokens.create()` invocation in
+/Users/jalaymovaliya/Odoo-Project/server/src/api/auth/controller.js:50:67
+
+  47 
+  48 // send verification email with link
+  49 const token = crypto.randomBytes(20).toString("hex");
+→ 50 const verificationToken = await prisma.verificationTokens.create({
+       data: {
+         userSysId: undefined,
+         token: "9824366c635d42e4511d4247d317ad6c9cd0ab95",
+         expiresAt: new Date("2024-06-30T09:51:31.237Z"),
+     +   user: {
+     +     create: UsersCreateWithoutVerificationTokensInput | UsersUncheckedCreateWithoutVerificationTokensInput,
+     +     connectOrCreate: UsersCreateOrConnectWithoutVerificationTokensInput,
+     +     connect: UsersWhereUniqueInput
+     +   }
+       }
+     })
+
+Argument `user` is missing.
+29-06-2024 15:24:39 error: [/auth/register] - Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-1fac1535e01sm29563875ad.163 - gsmtp
+29-06-2024 15:25:28 error: [/auth/register] - Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-72c6b584624sm2376835a12.53 - gsmtp
+29-06-2024 15:25:55 error: [/auth/register] - No recipients defined
+29-06-2024 15:26:48 error: [/auth/register] - No recipients defined
+29-06-2024 15:27:35 error: [/auth/register] - No recipients defined
+29-06-2024 15:36:17 error: [/auth/login] - secretOrPrivateKey must have a value
+29-06-2024 15:37:38 error: [/auth/login] - secretOrPrivateKey must have a value

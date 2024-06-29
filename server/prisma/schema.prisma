@@ -27,7 +27,6 @@ enum PaymentStatus {
 }
 
 model Users {
-  id                 String               @unique
   sys_id             String               @id @default(uuid())
   email              String               @unique
   name               String
@@ -45,13 +44,13 @@ model Users {
   collectionRequests CollectionRequest[]
   payments           Payment[]
   recycler           Recycler?
-  verificationTokens VerificationTokens[] @relation("verificationTokens")
+  verificationTokens VerificationTokens[] @relation("verificationToken")
 }
 
 model CollectionRequest {
   id                  String                  @id @default(uuid())
   userId              String
-  user                Users                   @relation(fields: [userId], references: [id])
+  user                Users                   @relation(fields: [userId], references: [sys_id])
   preferredPickupDate DateTime
   status              CollectionStatus        @default(PENDING)
   createdAt           DateTime                @default(now())
@@ -85,7 +84,7 @@ model CollectionRequestItem {
 model Recycler {
   id       String    @id @default(uuid())
   userId   String    @unique
-  user     Users     @relation(fields: [userId], references: [id])
+  user     Users     @relation(fields: [userId], references: [sys_id])
   services Service[]
 }
 
@@ -105,7 +104,7 @@ model Service {
 model Payment {
   id                  String             @id @default(uuid())
   userId              String
-  user                Users              @relation(fields: [userId], references: [id])
+  user                Users              @relation(fields: [userId], references: [sys_id])
   collectionRequestId String?            @unique
   collectionRequest   CollectionRequest? @relation(fields: [collectionRequestId], references: [id])
   amount              Float
@@ -123,10 +122,13 @@ model AcceptedWasteType {
 }
 
 model VerificationTokens {
-  userId    String @id
-  user      Users    @relation("verificationTokens", fields: [userId], references: [id])
-  token     String @unique
-  expiresAt DateTime
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id         String   @id @default(uuid())
+  userSysId  String
+  token      String   @unique
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  expiresAt  DateTime
+  user       Users    @relation("verificationToken", fields: [userSysId], references: [sys_id])
+
+  @@index([userSysId])
 }

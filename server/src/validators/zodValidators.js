@@ -1,24 +1,23 @@
 const { z } = require("zod");
 
 const loginSchema = z.object({
-    emailOrId: z.string({ required_error: "emailOrId is required" }).trim(),
+    email: z.string({ required_error: "Email is required" }).trim().email({ message: "Invalid email address" }),
     password: z.string({ required_error: "Password is required" }).trim().min(6, "Password must be at least 6 characters long"),
 });
 
 const signupSchema = z.object({
-    id: z.string({ required_error: "User ID is required" }).trim().min(6, "User ID must be at least 4 characters long"),
     email: z.string({ required_error: "Email is required" }).trim().email({ message: "Invalid email address" }),
     password: z.string({ required_error: "Password is required" }).trim().min(6, "Password must be at least 6 characters long"),
     phoneNumber: z.string({ required_error: "Phone number is required" }).min(10, "Phone number must be at least 10 characters long").max(10, "Phone number must be at most 10 characters long"),
     name: z.string({ required_error: "Name is required" }).trim().min(2, "Name must be at least 2 characters long"),
-    city: z.string({ required_error: "City is required" }).trim(),
-    country: z.string({ required_error: "Country is required" }).trim(),
-    state: z.string({ required_error: "State is required" }).trim(),
+    // city: z.string({ required_error: "City is required" }).trim(),
+    // country: z.string({ required_error: "Country is required" }).trim(),
+    // state: z.string({ required_error: "State is required" }).trim(),
     zipCode: z.string({ required_error: "Zip code is required" }).trim(),
 });
 
 const sendVerificationMailSchema = z.object({
-    emailOrId: z.string({ required_error: "Email or userid is required" }).trim()
+    email: z.string({ required_error: "Email or userid is required" }).trim().email({ message: "Invalid email address" })
 })
 
 const otpVerificationSchema = z.object({
