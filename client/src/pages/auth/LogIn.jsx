@@ -28,7 +28,8 @@ export default function SignIn() {
     });
     loginUser({email: data.get('email'), password: data.get('password')})
     .then((res) => {
-      navigate('/signup')
+      loginUser({ user: res.user, token: res.token })
+      navigate('/')
     })
     .catch((err) => {
       alert(err)
@@ -88,7 +89,7 @@ export default function SignIn() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="signup" variant="body2" sx={{ color: "black" }}>
+                <Link href="register" variant="body2" sx={{ color: "black" }}>
                   Don't have an account? Sign Up
                 </Link>
               </Grid>

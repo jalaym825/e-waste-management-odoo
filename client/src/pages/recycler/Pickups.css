@@ -1,0 +1,59 @@
+.recycler-dashboard {
+    padding: 20px;
+}
+
+.recycler-dashboard h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.order-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.order-details p {
+    margin: 5px 0;
+}
+
+.complete-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.complete-btn:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .order-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+.order-item.completed {
+    background-color: #e8f5e9;
+    border-color: #4caf50;
+}
+
+.order-item.completed .order-details p strong {
+    color: #4caf50;
+}
+
+.order-item.completed .status {
+    color: #4caf50;
+    font-weight: bold;
+}

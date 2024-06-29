@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Chip from '@mui/material/Chip';
 import Paper from '@mui/material/Paper';
 import './Item.css';
+import Global from '../../utils/Global';
+import { useParams } from 'react-router-dom';
 
 export default function AddItem() {
   const [formData, setFormData] = useState({
@@ -11,7 +13,7 @@ export default function AddItem() {
     collectionDate: '',
     timeSlot: '',
   });
-
+  const { id } = useParams();
   const [items, setItems] = useState([]);
 
   const handleInputChange = (e) => {
@@ -20,6 +22,7 @@ export default function AddItem() {
   };
 
   const handleAddItem = () => {
+    console.log(formData.wasteName, formData.quantity)
     setItems([...items, { wasteName: formData.wasteName, quantity: formData.quantity }]);
     setFormData({ ...formData, wasteName: '', quantity: '' });
   };
@@ -31,7 +34,21 @@ export default function AddItem() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log(formData);
+    items.map(i => i.name = i.wasteName)
+    // items.map(i => delete i.wasteName)
+    items.map(i => i.quantity = parseInt(i.quantity))
+    console.log(items)
+    Global.httpPost('/user/schedule-pickup', {
+      recyclerId: id,
+      date: new Date(formData.collectionDate),
+      items: items,
+    }, true)
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
   };
 
   return (
@@ -39,7 +56,7 @@ export default function AddItem() {
       <section className="user-page">
         <h2>Manage Your E-Waste</h2>
         <form onSubmit={handleSubmit}>
-          <div className="form-group">
+          {/* <div className="form-group">
             <label htmlFor="search">Search Type of E-Waste:</label>
             <input
               type="text"
@@ -50,8 +67,9 @@ export default function AddItem() {
               onChange={handleInputChange}
               required
             />
-          </div>
+          </div> */}
           <div className="form-inline-group">
+            <label htmlFor="wasteName">Enter Waste Item:</label>
             <input
               type="text"
               id="wasteName"
@@ -59,7 +77,7 @@ export default function AddItem() {
               placeholder="Enter name of waste item"
               value={formData.wasteName}
               onChange={handleInputChange}
-              required
+              // required
             />
             <input
               type="number"
@@ -68,7 +86,7 @@ export default function AddItem() {
               placeholder="Enter quantity"
               value={formData.quantity}
               onChange={handleInputChange}
-              required
+              // required
             />
             <button type="button" onClick={handleAddItem}>
               Add
