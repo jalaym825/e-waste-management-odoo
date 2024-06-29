@@ -2202,3 +2202,184 @@ Invalid value for argument `type`. Expected UserType.
 29-06-2024 19:19:03 info: [/auth/login] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
 29-06-2024 19:19:03 debug: [/auth/login] - email: 22ce005@charusat.edu.in
 29-06-2024 19:19:04 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:34:18 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:34:18 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:34:18 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:34:18 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:34:19 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:34:19 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:34:19 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:34:19 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:34:43 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:34:43 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:34:43 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:34:43 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:05 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:05 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:05 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:05 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:05 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:05 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:05 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:05 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:06 warn: [/middleware/verifyJWT] - token missing
+29-06-2024 19:35:06 debug: [/middleware/verifyJWT] - token: undefined
+29-06-2024 19:35:14 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:14 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:14 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:14 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:27 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:27 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:27 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:27 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:29 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:29 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:29 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:29 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:30 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:30 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:30 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:30 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:32 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:32 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:32 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:32 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:38 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:38 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:38 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:38 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:44 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:44 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:44 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:44 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:47 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:47 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:47 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:47 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:48 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:48 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:48 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:48 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:52 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:52 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:52 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:52 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:55 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:55 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:55 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:55 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:55 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:55 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:35:55 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:55 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:35:57 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:37:05 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:37:05 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:37:05 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:37:05 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:37:07 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:37:38 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:38:04 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:38:04 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:38:04 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:38:04 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:12 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:12 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:12 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:12 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:21 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:21 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:21 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:21 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:24 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:24 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:24 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:24 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:26 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:26 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:26 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:26 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:29 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:29 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:29 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:29 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:34 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:34 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:34 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:34 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:39 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:39 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:39 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:39 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:55 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:55 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:40:55 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:40:55 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:41:04 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:41:04 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:41:04 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:41:04 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:41:05 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:41:05 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:41:05 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:41:05 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:41:05 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:41:05 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:41:05 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:41:05 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:41:16 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:41:16 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:41:16 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:41:16 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:41:17 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:41:17 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:41:17 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:41:17 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:41:46 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:41:46 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:41:46 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:41:46 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:41:47 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:42:10 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:43:23 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:43:44 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:06 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:06 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:06 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:44:06 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:44:10 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:10 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:10 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:44:10 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:44:39 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:39 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:39 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:44:39 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:44:42 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:42 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:42 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:44:42 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:44:44 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:44 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:44 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:44:44 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:44:46 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:46 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:46 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:44:46 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:44:56 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:56 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:56 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:44:56 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:44:57 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:57 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:44:57 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:44:57 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:45:45 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:45:45 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:45:45 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:45:45 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:45:46 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:45:46 info: [/middleware/verifyJWT] - user: undefined authenticated
+29-06-2024 19:45:46 info: [/auth/getUser] - success - 4882cf72-5cb7-449a-8ca6-e5618759708a
+29-06-2024 19:45:46 debug: [/auth/getUser] - id: 4882cf72-5cb7-449a-8ca6-e5618759708a
