@@ -26,7 +26,7 @@ const schedulePickup = async (req, res, next) => {
             const { name, quantity } = itemData;
 
             // Try to find the item by name
-            let existingItem = await prisma.item.findUnique({
+            let existingItem = await prisma.item.findFirst({
                 where: { name }
             });
 

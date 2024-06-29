@@ -23,7 +23,8 @@ const getPickups = async (req, res, next) => {
                     include: {
                         item: true,
                     }
-                }
+                },
+                user: true
             }
         });
 
@@ -33,6 +34,21 @@ const getPickups = async (req, res, next) => {
     }
 }
 
+const getRecyclers = async (req, res, next) => {
+    try {
+        const recyclers = await prisma.recycler.findMany({
+            include: {
+                user: true
+            }
+        });
+
+        res.status(200).json({ recyclers });
+    } catch (err) {
+        next({ path: '/recyclers', status: 400, message: err.message, extraData: err });
+    }
+}
+
 module.exports = {
-    getPickups
+    getPickups,
+    getRecyclers
 };
