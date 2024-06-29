@@ -7,6 +7,8 @@ import "./App.css";
 import { NavBar } from "./components/NavBar.jsx";
 import { Home } from "./pages/home/Home.jsx";
 import { Services } from "./pages/services/Services.jsx";
+import Search from "./pages/search/Search.jsx";
+import AddItem from "./pages/item/Item.jsx";
 export const cookies = new Cookies();
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
           <Route path="services" element={<Services />} />
           <Route path="signup" element={<SignUp />} />
           <Route path="LogIn" element={<LogIn />} />
+          <Route path="search" element={<Search/>} />
+          <Route path="add-item" element={<AddItem/>} />
         </Route>
       </Routes>
     </>
