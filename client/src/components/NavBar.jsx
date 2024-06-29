@@ -6,7 +6,7 @@ export const NavBar = () => {
     return (
         <>
             <header>
-                <div class="logo">
+                <div className="logo">
                     <img src="final-logo.png" alt="ECO MITRA Logo" />
                 </div>
                 <nav>

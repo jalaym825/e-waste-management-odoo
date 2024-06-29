@@ -58,13 +58,17 @@ export default function SignUp() {
     else
       newErrors.userType = "";
 
+    console.log(userType)
+    const type = userType.toUpperCase();
+    console.log(type)
+
     Global.httpPost('/auth/register', {
       name: formData.get("firstName") + " " + formData.get("lastName"),
       // firstName: formData.get("firstName"),
       // lastName: formData.get("lastName"),
       email: formData.get("email"),
       password: formData.get("password"),
-      userType: userType,
+      type,
       phoneNumber: formData.get("phoneNumber"),
       zipCode: formData.get("zipCode"),
     }, false)
@@ -183,9 +187,9 @@ export default function SignUp() {
                   <RadioButton
                     inputId="userType1"
                     name="userType"
-                    value="Individual"
+                    value="Individuals"
                     onChange={(e) => setUserType(e.value)}
-                    checked={userType === "Individual"}
+                    checked={userType === "Individuals"}
                   />
                   <label htmlFor="userType1" className="ml-2">
                     Individual
@@ -207,9 +211,9 @@ export default function SignUp() {
                   <RadioButton
                     inputId="userType3"
                     name="userType"
-                    value="Recycler"
+                    value="Recyclers"
                     onChange={(e) => setUserType(e.value)}
-                    checked={userType === "Recycler"}
+                    checked={userType === "Recyclers"}
                   />
                   <label htmlFor="userType3" className="ml-2">
                     Recycler
